@@ -24,11 +24,7 @@ install_python() {
 
 ask_confirm() {
   read -rp "$(warn "$1 [y/N]: ")" proceed
-  if [[ "$proceed" == [yY] ]]; then
-    return 0
-  else
-    return 1
-  fi
+  [[ "$proceed" == [yY] ]]
 }
 
 create_gnome_shortcut() {
